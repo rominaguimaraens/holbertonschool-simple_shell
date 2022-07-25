@@ -4,7 +4,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <sys/wait.h>
+#include <string.h>
 
+char *_strdup(char *str);
+void read_cmd(char cmd[], char *par[]);
+void prompt(void);
+int _strcmp(char *s1, char *s2);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 int _printf(const char *format, ...);

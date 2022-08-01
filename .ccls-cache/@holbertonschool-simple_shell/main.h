@@ -5,10 +5,12 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <string.h>
 
+void execute(char **args);
+char** split_line(char *line);
+char* read_line(void);
 char *_strdup(char *str);
-void read_cmd(char cmd[], char *par[]);
-void prompt(void);
 int _strcmp(char *s1, char *s2);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);

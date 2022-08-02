@@ -11,7 +11,6 @@ char *_which(char *filename, ...)
 	char **saved;
 
 	duplicate = _getenv("PATH");
-	args = repeat(duplicate) + 2;
 	saved = malloc(args * sizeof(char *));
 	if (saved == NULL)
 		return ("error");

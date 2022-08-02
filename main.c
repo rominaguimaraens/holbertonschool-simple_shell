@@ -2,14 +2,15 @@
 /**
  *
  */
-int main(int argc, char **argv)
+int main(int __attribute__((unused)) argc, char **argv)
 {
-        size_t bufsize = 0;
-        char *buffer = NULL, *buffer2 = NULL, *location[] = {"", "/usr", NULL}, *token = NULL;
-        size_t character;
+	size_t bufsize = 0;
+	char *buffer = NULL, *buffer2 = NULL, *location[] = {"", "/usr", NULL};
+	char *token = NULL;
+	size_t character;
 	int pid = 0, status;
 
-	while (buffer2 != "no")
+	while (1)
 	{
 		printf("$ ");
 		character = getline(&buffer, &bufsize, stdin);
@@ -26,5 +27,5 @@ int main(int argc, char **argv)
 		}
 		wait(&status);
 	}
-	return (0); 
+	return (0);
 }

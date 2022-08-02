@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define _POSIX_C_SOURCE 200809L
+#include<stdarg.h>
 #include <string.h>
+#include <strings.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -10,7 +13,7 @@
 
 extern char **environ;
 
-int repeat(char *str);
+int repeat(char *str, char delim);
 char *_getenv(const char *name);
 char *_which(char *filename, ...);
 char *_str_concat(char *s1, char *s2);

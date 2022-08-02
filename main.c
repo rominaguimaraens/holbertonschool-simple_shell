@@ -2,18 +2,17 @@
 /**
  *
  */
-int main(int __attribute__((unused)) argc, char **argv)
+int main(void)
 {
 	size_t bufsize = 0;
 	char *buffer = NULL, *buffer2 = NULL, *location[] = {"", "/usr", NULL};
 	char *token = NULL;
-	size_t character;
 	int pid = 0, status;
 
 	while (1)
 	{
 		printf("$ ");
-		character = getline(&buffer, &bufsize, stdin);
+		getline(&buffer, &bufsize, stdin);
 		buffer2 = _strdup(buffer);
 		token = strtok(buffer2, "\n");
 		pid = fork();

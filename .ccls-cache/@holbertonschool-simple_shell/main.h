@@ -1,6 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-#define _POSIX_C_SOURCE 200809L
 #include<stdarg.h>
 #include <string.h>
 #include <strings.h>
@@ -13,6 +12,7 @@
 
 extern char **environ;
 
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
 int repeat(char *str, char delim);
 char *_getenv(const char *name);
 char *_which(char *filename, ...);

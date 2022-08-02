@@ -10,7 +10,6 @@
 
 extern char **environ;
 
-int repeat(char *str);
 char *_getenv(const char *name);
 char *_which(char *filename, ...);
 char *_str_concat(char *s1, char *s2);

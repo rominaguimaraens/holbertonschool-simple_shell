@@ -1,15 +1,18 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
-#include <unistd.h>
+#include <sys/types.h>
 #include <sys/wait.h>
-#include <string.h>
+#include <unistd.h>
+#include <sys/stat.h>
 
-void execute(char **args);
-char** split_line(char *line);
-char* read_line(void);
+extern char **environ;
+
+char *_getenv(const char *name);
+char *_which(char *filename, ...);
+char *_str_concat(char *s1, char *s2);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
 char *_strcat(char *dest, char *src);

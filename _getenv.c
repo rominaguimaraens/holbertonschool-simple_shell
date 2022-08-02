@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *_getenv(const char *name, char **environ)
+char *_getenv(const char *name)
 {
 	int i = 0;
 	char *duplicate, *token;

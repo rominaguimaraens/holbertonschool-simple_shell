@@ -17,6 +17,10 @@ int main(int __attribute__((unused)) argc, char **argv)
 		buffer2 = _strdup(buffer);
 		token = strtok(buffer2, "\n");
 		pid = fork();
+		
+		if (character == EOF)
+			break;
+		
 		if (pid == -1)
 			return (-1);
 		if (pid == 0)

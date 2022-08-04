@@ -25,6 +25,8 @@ int print_number(va_list list);
 int print_char(va_list list);
 int print_string(va_list list);
 int _putchar(char c);
+char *_which(char *filename, ...);
+char *_strdup(char *str);
 
 /**
  * struct prf - posible character

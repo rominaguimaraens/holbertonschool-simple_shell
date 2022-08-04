@@ -1,4 +1,4 @@
-hell
+                                                              Shell.
 
 
 
@@ -11,6 +11,31 @@ handling.
 Bash is a command processor that typically runs in a text window where the user types commands that cause actions.
 Bash can also read and execute commands from a file, called a shell script.
 
+Testing
+Your shell should work like this in interactive mode:
+```
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+```
+
+But also in non-interactive mode:
+```
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
+```
 
 ## Basic loop of a shell:
 

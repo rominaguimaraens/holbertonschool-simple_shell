@@ -68,15 +68,20 @@ This repository contains the following files:
 
 
 -Enter custom shell by typing "./hsh". You should be prompted with a ($).
+
 -Type a command of your liking and press "Enter".
+
 -Appropriate output will appear.
+
 -Prompt reappears and awaits your next command.
+
 -Exit shell by typing "exit"
 
 
 ## Authors
 
 Marcelo Rodríguez | [GitHub](https://github.com/Marcelorb1)
+
 Romina Guimaraens | [GitHub](https://github.com/rominaguimaraens)
    
 

@@ -25,7 +25,10 @@ int main(int __attribute__((unused)) argc, char **argv)
 		if (_strcmp(token, "exit") == 0)
 			break;
 		if (!token)
+		{
+			free(buffer);
 			return (0);
+		}
 		location = execute(token);
 
 		if (fork() == 0)

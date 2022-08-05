@@ -28,5 +28,6 @@ int main(void)
 		}
 		wait(&status);
 	}
+	free(buffer);
 	return (0);
 }

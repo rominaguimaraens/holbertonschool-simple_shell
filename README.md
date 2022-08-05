@@ -1,4 +1,5 @@
 #                                             Simple shell
+![linux logo](https://www.profesionalreview.com/wp-content/uploads/2017/03/Shell-Script-Linux.png)
 
 "The gates of shell" is a Holberton School project in the first trimester, helps student to understand the advanced 
 concepts behind the shell program including process, system call, bit manipulation, file managment and error 

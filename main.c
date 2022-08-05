@@ -17,7 +17,8 @@ int main(int __attribute__((unused)) argc, char **argv)
 			printf("$ ");
 		}
 		if (getline(&buffer, &bufsize, stdin) == -1)
-		{
+		{       
+			free(buffer);
 			exit(0);
 		}
 		token = strtok(buffer, "\n");
@@ -51,6 +52,5 @@ int main(int __attribute__((unused)) argc, char **argv)
 		}
 	}
 	free(buffer);
-	free(buffer2);
 	return (0);
 }

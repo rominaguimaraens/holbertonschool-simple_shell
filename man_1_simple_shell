@@ -1,1 +1,64 @@
-placeholder
+.TH Simple shell "5th August 2022" "version 1.0" "Programmer's Manual"
+
+.SH NAME
+.B Simple shell (hsh)
+
+- command interpreter (shell)
+
+.SH SYNOPSIS
+.PP
+.B ./hsh
+
+.PP
+.B 
+.SH DESCRIPTION
+"The gates of shell" is a Holberton School project in the first trimester, helps student to understand the 
+advanced concepts behind the shell program including process, system call, bit manipulation, file managment and 
+error handling. Bash is a command processor that typically runs in a text window where the user types commands 
+that cause actions. Bash can also read and execute commands from a file, called a shell script.
+
+.PP
+.SH EXAMPLE:
+$PATH:
+.PP
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
+
+.PP
+Has two builtinin commands it also integrates with other commands \
+that can be located in the PATH. The objective of this shell is to replicate \
+exactly as the shell 'sh' or 'bash'.
+.PP
+.B $ man bash
+. hsh\
+takes commands from files, shell scripts and user input in both interactive or non-interactive mode.
+
+.SH INITIALIZATION
+the user needs to compile \ 
+using: gcc. The run the output file by calling it whether \
+by the output name it was given. 
+.PP
+.B EX: $ ./some_name or $ a./a.out.\
+.PP
+.SH The shell will compile with the following:
+gcc -Wall -Wextra -Werror -pedantic *.c -o hsh
+
+.PP
+If the user inputs piplines or calls  non-interactive mode the ghost shell should\
+
+.SH OPTIONS
+does not take any options but does utilize \
+extern char **environ. 
+
+.B
+.PP
+.SH BUILT-INS
+.PP
+.B There are two builtins in the shell.\
+
+.SH SEE ALSO
+.I Nothing else
+.SH BUGS
+No Known Bugs
+
+.SH AUTHORS
+.B Marcelo Rodriguez and Romina Guimaraens

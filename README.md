@@ -82,8 +82,18 @@ Features:
 - uses PATH variable to find executable command
 - if executable is not found, prints an error message and displays prompt again
 - includes an exit function that exits the shell
+## Syntax
+
+The shell works by using commands given by the user input. The shell commands take in the following syntax: command name {arguments}. The shell executes a command after it is written by user using the command followed by the arguments.
+
+cat holberton.h The above example takes in a command by the user followed with the arguments. In this case the command is cat (to view file without opening file) followed by argument the file name in this case holberton.h.
+
+For more information on cat, you can use the man command which will show a manual of the given command or any command you wish to know more information on. It contains system calls, libraries and other important files.
+
+The shell also contains two builtins which are commands that are within the shell itself. The two builtins are exit and env. You can also use help command to know which builtins are provided by the shell. The help command works similarly to the manual where it provides further detail or information on given builtin.
 
 ## Getting HSH
+
 In order to install the shell and get benefits of its features you need to clone the current project, and compile it using the command down below. You need to make sure that this shell tested and garantees work based on gcc-4.8 and the C90 standard.
  ```-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 ```
 

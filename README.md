@@ -1,5 +1,5 @@
                                           # Shell.
-![alt text](https://www.profesionalreview.com/2017/03/12/shell-script-linux/) 
+![alt text]("C:\Users\chelo\Downloads\Shell-Script-Linux-1280x720.png") 
 
 "The gates of shell" is a Holberton School project in the first trimester, helps student to understand the advanced 
 concepts behind the shell program including process, system call, bit manipulation, file managment and error 

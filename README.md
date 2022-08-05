@@ -165,8 +165,11 @@ This repository contains the following files:
 
 - _getenv.c: searches for the environment string pointed to by name and returns the associated value to the string.
 
-- _printf.c: custom printf function, sends formatted output to stdout.
-repeat.c: counts how many times a character is repeated.
+- execute: finds full path of a command.
+
+- _printf: custom printf function, sends formatted output to stdout.
+
+- repeat: counts how many times a character is repeated.
 
 - _str_concat: appends one String to the end of another.
 
@@ -181,6 +184,10 @@ repeat.c: counts how many times a character is repeated.
 - _printf: sends a formatted string to the standard output (the display).
 
 -  _putchar: used to write a character, of unsigned char type, to stdout.
+
+-  freeing: frees the memory of an array.
+
+-  prints: prints a structure.  
 
 ## Usage
 

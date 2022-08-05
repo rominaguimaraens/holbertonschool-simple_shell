@@ -3,30 +3,52 @@
  * main - Entry point
  * Return: 0 (success)
  */
-int main(void)
+int main(int __attribute__((unused)) argc, char **argv)
 {
 	size_t bufsize = 0;
-	char *buffer = NULL, *buffer2 = NULL, *location[] = {"", "/usr", NULL};
-	char *token = NULL;
-	int pid = 0, status;
+	char *buffer = NULL, **location = NULL;
+	char *token = NULL, *empty = "none";
+	int status = 0;
 
 	while (1)
 	{
-		printf("$ ");
-		getline(&buffer, &bufsize, stdin);
-		buffer2 = _strdup(buffer);
-		token = strtok(buffer2, "\n");
-		pid = fork();
-
-		if (pid == -1)
-			return (-1);
-		if (pid == 0)
+		if (isatty(0) == 1)
 		{
-			location[0] = _which(token);
-			if (execve(location[0], location, NULL) == -1)
-				perror("Error: ");
+			printf("$ ");
 		}
-		wait(&status);
+		if (getline(&buffer, &bufsize, stdin) == -1)
+		{
+			exit(0);
+		}
+		token = strtok(buffer, "\n");
+
+		if (_strcmp(token, "exit") == 0)
+			break;
+		if (_strcmp(token, "env") == 0)
+		{
+			prints(environ);
+			continue;
+		}
+		location = execute(token);
+		if (_strcmp(location[0], empty) == 0)
+			continue;
+		if (fork() == 0)
+		{
+			if (execve(location[0], location, environ) == -1)
+			{
+				perror(argv[0]);
+				return (0);
+			}
+		}
+		else
+		{
+			wait(&status);
+			bufsize = 0;
+			buffer = NULL;
+
+			free(token);
+			freeing(location);
+		}
 	}
 	free(buffer);
 	free(buffer2);

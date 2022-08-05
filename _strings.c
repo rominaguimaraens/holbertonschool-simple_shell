@@ -73,28 +73,6 @@ int _strcmp(char *s1, char *s2)
 	return (0);
 }
 
-/**
-* _strcat - concatenates two strings
-* @dest: destination string
-* @src: other string
-* Return: returns dest
-*/
-char *_strcat(char *dest, char *src)
-{
-	int i = 0;
-	int j;
-
-	while (dest[i])
-	{
-		i++;
-	}
-	for (j = 0; src[j]; j++, i++)
-	{
-		dest[i] = src[j];
-	}
-	dest[i] = 0;
-	return (dest);
-}
 /*
  * _str_concat - concatenates tro strings
  * @s1: string one
@@ -134,4 +112,12 @@ char *_str_concat(char *s1, char *s2)
 	}
 	conc[p2] = '\0';
 	return (conc);
+}
+
+void prints(char **stru)
+{
+	int i;
+
+	for (i = 0; stru[i]; i++)
+		_printf("%s\n", stru[i]);
 }

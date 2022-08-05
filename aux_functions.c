@@ -106,7 +106,7 @@ char **execute(char *buffer)
 		if (str[0] == NULL)
 		{
 			free(str[0]);
-			str[0] = "no";
+			str[0] = "none";
 			free(ptr), free(tok);
 			return (str);
 		}

@@ -7,7 +7,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 {
 	size_t bufsize = 0;
 	char *buffer = NULL, **location = NULL;
-	char *token = NULL;
+	char *token = NULL, empty = "none";
 	int status = 0;
 
 	while (1)
@@ -25,7 +25,8 @@ int main(int __attribute__((unused)) argc, char **argv)
 		if (_strcmp(token, "exit") == 0)
 			break;
 		location = execute(token);
-
+		if (_strcmp(location[0], empty) == 0)
+			continue;
 		if (fork() == 0)
 		{
 			if (execve(location[0], location, environ) == -1)

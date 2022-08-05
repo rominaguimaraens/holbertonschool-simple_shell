@@ -29,5 +29,6 @@ int main(void)
 		wait(&status);
 	}
 	free(buffer);
+	free(buffer2);
 	return (0);
 }

@@ -14,7 +14,7 @@ extern char **environ;
 
 int repeat(char *str, char delim);
 char *_getenv(const char *name);
-char *_which(char *filename, ...);
+char *_which(char *filename);
 char *_str_concat(char *s1, char *s2);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);

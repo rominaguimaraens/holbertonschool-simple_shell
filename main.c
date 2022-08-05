@@ -7,7 +7,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 {
 	size_t bufsize = 0;
 	char *buffer = NULL, **location = NULL;
-	char *token = NULL, *hint = "no";
+	char *token = NULL;
 	int status = 0;
 
 	while (1)
@@ -30,8 +30,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 			free(location[0]), free(buffer);
 			return (0);
 		}
-		if (strcmp(location[0], hint) == 0)
-			continue;
 		if (fork() == 0)
 		{
 			if (execve(location[0], location, environ) == -1)
@@ -45,7 +43,6 @@ int main(int __attribute__((unused)) argc, char **argv)
 			wait(&status);
 			WEXITSTATUS(status);
 			free(token);
-			freeing(location);
 		}
 	}
 	return (0);

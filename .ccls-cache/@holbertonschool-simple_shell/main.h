@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include<stdarg.h>
+#include <stdarg.h>
 #include <string.h>
 #include <strings.h>
 #include <stdio.h>
@@ -12,7 +12,6 @@
 
 extern char **environ;
 
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
 int repeat(char *str, char delim);
 char *_getenv(const char *name);
 char *_which(char *filename, ...);

@@ -13,7 +13,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-int print_number_xd(unsigned n);
+int print_number_xd(unsigned int n);
 
 /**
 * print_number - print a number
@@ -23,7 +23,7 @@ int print_number_xd(unsigned n);
 int print_number(va_list list)
 {
 		int n = va_arg(list, int);
-		
+
 		if (n < 0)
 		{
 			_putchar('-');

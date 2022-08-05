@@ -95,7 +95,12 @@ char *_strcat(char *dest, char *src)
 	dest[i] = 0;
 	return (dest);
 }
-
+/*
+ * _str_concat - concatenates tro strings
+ * @s1: string one
+ * @s2: string two
+ * Return: concatenated string
+ */
 char *_str_concat(char *s1, char *s2)
 {
 	char *conc;

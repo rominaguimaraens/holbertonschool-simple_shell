@@ -14,7 +14,7 @@ int (*get_op_fp(char y))(va_list)
 			{'s', print_string},
 			{'d', print_number},
 			{'i', print_number},
- 			{'\0', NULL} };
+			{'\0', NULL} };
 
 	while (atr[z].letter != '\0')
 	{

@@ -44,6 +44,8 @@ int main(int __attribute__((unused)) argc, char **argv)
 		{
 			wait(&status);
 			WEXITSTATUS(status);
+			free(token);
+			freeing(location);
 		}
 	}
 	return (0);

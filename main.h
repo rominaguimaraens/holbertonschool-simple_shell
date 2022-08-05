@@ -11,6 +11,7 @@
 #include <sys/stat.h>
 
 extern char **environ;
+void freeing(char **var);
 char **execute(char *buffer);
 int repeat(char *str, char delim);
 char *_getenv(const char *name);

@@ -114,3 +114,11 @@ char **execute(char *buffer)
 	free(tok), free(ptr);
 	return (str);
 }
+void freeing(char **var)
+{
+	int i = 0;
+
+	for (; var[i]; i++)
+		free(var[i]);
+	free(var[i]), free(var);
+}

@@ -43,7 +43,7 @@ char *_which(char *filename, ...)
  * @name: name of the variable
  * Return: pointer to the value
  */
-char *_getenv(const char *name)
+char *_getenv(char *name)
 {
 	int i = 0;
 	char *duplicate, *token;
@@ -54,7 +54,7 @@ char *_getenv(const char *name)
 
 		token = strtok(duplicate, "=");
 
-		if (strcmp(duplicate, name) == 0)
+		if (_strcmp(duplicate, name) == 0)
 		{
 			token = strtok(NULL, "=");
 			return (token);
@@ -86,7 +86,7 @@ int repeat(char *str, char delim)
 char **execute(char *buffer)
 {
 	char **str = NULL;
-	char *ptr = strdup(buffer), *token = NULL, *tok = NULL;
+	char *ptr = _strdup(buffer), *token = NULL, *tok = NULL;
 	int i = 0, args = 0;
 
 	args = repeat(buffer, ' ') + 2;

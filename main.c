@@ -24,6 +24,11 @@ int main(int __attribute__((unused)) argc, char **argv)
 
 		if (_strcmp(token, "exit") == 0)
 			break;
+		if (_strcmp(token, "env") == 0)
+		{
+			prints(environ);
+			continue;
+		}
 		location = execute(token);
 		if (_strcmp(location[0], empty) == 0)
 			continue;

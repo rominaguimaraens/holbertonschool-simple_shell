@@ -151,12 +151,12 @@ This repository contains the following files:
 | ------ | ------ |
 | main.c | main function |
 | main.h | header file containing function prototypes |
-| _strings.c |  contains functions related to strings
+| _strings.c |  contains functions related to strings.
 | _wich.c | used to identify the location of a given executable that is executed when you type the command in the terminal prompt. |
 | _getenv.c| searches for the environment string pointed to by name and returns the associated value to the string. |
 | _printf.c | custom printf function, sends formatted output to stdout.|
 | _printf_aux.c|contains _putchar,  print_number_xd, print_number, print_char and print_string that prints characters, numbers and string respectively.
-| repeat.c |
+| repeat.c | counts how many times a character is repeated.
 | hsh | exeutable file for the shell
 | man_1_simple_shell| manual
 

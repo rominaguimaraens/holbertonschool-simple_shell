@@ -177,7 +177,7 @@ repeat.c: counts how many times a character is repeated.
 
 - _printf: sends a formatted string to the standard output (the display).
 
-- ** _putchar:** used to write a character, of unsigned char type, to stdout.
+-  _putchar: used to write a character, of unsigned char type, to stdout.
 
 ## Usage
 

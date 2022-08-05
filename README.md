@@ -9,67 +9,67 @@ Bash can also read and execute commands from a file, called a shell script.
 
 ## List of allowed functions
 
--access (man 2 access)
+- access (man 2 access)
 
--chdir (man 2 chdir)
+- chdir (man 2 chdir)
 
--close (man 2 close)
+- close (man 2 close)
 
--closedir (man 3 closedir)
+- closedir (man 3 closedir)
 
--execve (man 2 execve)
+- execve (man 2 execve)
 
--exit (man 3 exit)
+- exit (man 3 exit)
 
--_exit (man 2 _exit)
+- _exit (man 2 _exit)
 
--fflush (man 3 fflush)
+- fflush (man 3 fflush)
 
--fork (man 2 fork)
+- fork (man 2 fork)
 
--free (man 3 free)
+- free (man 3 free)
 
--getcwd (man 3 getcwd)
+- getcwd (man 3 getcwd)
 
--getline (man 3 getline)
+- getline (man 3 getline)
 
--getpid (man 2 getpid)
+- getpid (man 2 getpid)
 
--isatty (man 3 isatty)
+- isatty (man 3 isatty)
 
--kill (man 2 kill)
+- kill (man 2 kill)
 
--malloc (man 3 malloc)
+- malloc (man 3 malloc)
 
--open (man 2 open)
+- open (man 2 open)
 
--opendir (man 3 opendir)
+- opendir (man 3 opendir)
 
--perror (man 3 perror)
+- perror (man 3 perror)
 
--read (man 2 read)
+- read (man 2 read)
 
--readdir (man 3 readdir)
+- readdir (man 3 readdir)
 
--signal (man 2 signal)
+- signal (man 2 signal)
 
--stat (__xstat) (man 2 stat)
+- stat (__xstat) (man 2 stat)
 
--lstat (__lxstat) (man 2 lstat)
+- lstat (__lxstat) (man 2 lstat)
 
--fstat (__fxstat) (man 2 fstat)
+- fstat (__fxstat) (man 2 fstat)
 
--strtok (man 3 strtok)
+- strtok (man 3 strtok)
 
--wait (man 2 wait)
+- wait (man 2 wait)
 
--waitpid (man 2 waitpid)
+- waitpid (man 2 waitpid)
 
--wait3 (man 2 wait3)
+- wait3 (man 2 wait3)
 
--wait4 (man 2 wait4)
+- wait4 (man 2 wait4)
 
--write (man 2 write)
+- write (man 2 write)
 
 ## Testing
 
@@ -149,27 +149,48 @@ This repository contains the following files:
 | ------ | ------ |
 | main.c | main function |
 | main.h | header file containing function prototypes |
-| _strings.c |  contains functions related to strings.
-| _wich.c | used to identify the location of a given executable that is executed when you type the command in the terminal prompt. |
-| _getenv.c| searches for the environment string pointed to by name and returns the associated value to the string. |
+| _strings.c |  contains functions related to strings.|
+| aux_functions.c| contains auxiliary functions.|
 | _printf.c | custom printf function, sends formatted output to stdout.|
 | _printf_aux.c|contains _putchar,  print_number_xd, print_number, print_char and print_string that prints characters, numbers and string respectively.
-| repeat.c | counts how many times a character is repeated.
 | hsh | exeutable file for the shell
-| man_1_simple_shell| manual
+| man_1_simple_shell| manual.
+
+## Function used in this project: 
+
+- _wich.c: used to identify the location of a given executable that is executed when you type the command in the terminal prompt.
+
+- _getenv.c: searches for the environment string pointed to by name and returns the associated value to the string.
+
+- _printf.c: custom printf function, sends formatted output to stdout.
+repeat.c: counts how many times a character is repeated.
+
+- _str_concat: appends one String to the end of another.
+
+- _strdup: duplicates a string
+
+- _strcmp : compares two strings character by character.
+
+- _strcat: appends the string pointed to by src to the end of the string pointed to by dest.
+
+- _strcpy: copies the string pointed by source (including the null character) to the destination.
+
+- _printf: sends a formatted string to the standard output (the display).
+
+- ** _putchar:** used to write a character, of unsigned char type, to stdout.
 
 ## Usage
 
 
--Enter custom shell by typing "./hsh". You should be prompted with a ($).
+- Enter custom shell by typing "./hsh". You should be prompted with a ($).
 
--Type a command of your liking and press "Enter".
+- Type a command of your liking and press "Enter".
 
--Appropriate output will appear.
+- Appropriate output will appear.
 
--Prompt reappears and awaits your next command.
+- Prompt reappears and awaits your next command.
 
--Exit shell by typing "exit"
+- Exit shell by typing "exit"
 
 
 ## Authors

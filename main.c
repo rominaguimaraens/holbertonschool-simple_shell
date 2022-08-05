@@ -24,12 +24,10 @@ int main(int __attribute__((unused)) argc, char **argv)
 
 		if (_strcmp(token, "exit") == 0)
 			break;
-		location = execute(token);
-		if (!location[0])
-		{
-			free(location[0]), free(buffer);
+		if (!token)
 			return (0);
-		}
+		location = execute(token);
+
 		if (fork() == 0)
 		{
 			if (execve(location[0], location, environ) == -1)
@@ -41,7 +39,9 @@ int main(int __attribute__((unused)) argc, char **argv)
 		else
 		{
 			wait(&status);
-			WEXITSTATUS(status);
+			bufsize = 0;
+			buffer = NULL;
+
 			free(token);
 			freeing(location);
 		}

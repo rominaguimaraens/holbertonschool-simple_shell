@@ -1,4 +1,4 @@
-                                                              Shell.
+   # Shell.
  
 
 "The gates of shell" is a Holberton School project in the first trimester, helps student to understand the advanced 
@@ -7,7 +7,7 @@ handling.
 Bash is a command processor that typically runs in a text window where the user types commands that cause actions.
 Bash can also read and execute commands from a file, called a shell script.
 
-List of allowed functions
+## List of allowed functions
 
 access (man 2 access)
 chdir (man 2 chdir)

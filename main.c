@@ -6,9 +6,9 @@
 int main(int __attribute__((unused)) argc, char **argv)
 {
 	size_t bufsize = 0;
-	char *buffer = NULL, *buffer2 = NULL, *location[] = {"", "/usr", NULL};
-	char *token = NULL;
-	int pid = 0, status;
+	char *buffer = NULL, **location = NULL;
+	char *token = NULL, *hint = "no";
+	int status = 0;
 
 	while (1)
 	{
@@ -20,22 +20,31 @@ int main(int __attribute__((unused)) argc, char **argv)
 		{
 			exit(0);
 		}
-		buffer2 = _strdup(buffer);
-		token = strtok(buffer2, "\n");
-		pid = fork();
+		token = strtok(buffer, "\n");
 
-		if (pid == -1)
-			return (-1);
-		if (pid == 0)
+		if (_strcmp(token, "exit") == 0)
+			break;
+		location = execute(token);
+		if (!location[0])
 		{
-			location[0] = _which(token);
-			if (execve(location[0], location, NULL) == -1)
-				perror(argv[0]);
+			free(location[0]), free(buffer);
+			return (0);
 		}
-		wait(&status);
-		free(buffer2);
-		buffer = NULL;
-
+		if (strcmp(location[0], hint) == 0)
+			continue;
+		if (fork() == 0)
+		{
+			if (execve(location[0], location, environ) == -1)
+			{
+				perror(argv[0]);
+				return (0);
+			}
+		}
+		else
+		{
+			wait(&status);
+			WEXITSTATUS(status);
+		}
 	}
 	return (0);
 }

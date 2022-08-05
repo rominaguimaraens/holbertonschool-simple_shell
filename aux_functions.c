@@ -82,3 +82,35 @@ int repeat(char *str, char delim)
 	}
 	return (count);
 }
+
+char **execute(char *buffer)
+{
+	char **str = NULL;
+	char *ptr = strdup(buffer), *token = NULL, *tok = NULL;
+	int i = 0, args = 0;
+
+	args = repeat(buffer, ' ') + 2;
+	str = malloc(args * sizeof(char *));
+	token = strtok(ptr, " ");
+	for (i = 0; token; i++)
+	{
+		str[i] = _strdup(token);
+		token = strtok(NULL, " ");
+	}
+	str[i] = NULL;
+	if (repeat(str[0], '/') == 0)
+	{
+		tok = _strdup(str[0]);
+		free(str[0]);
+		str[0] = _which(tok);
+		if (str[0] == NULL)
+		{
+			free(str[0]);
+			str[0] = "no";
+			free(ptr), free(tok);
+			return (str);
+		}
+	}
+	free(tok), free(ptr);
+	return (str);
+}

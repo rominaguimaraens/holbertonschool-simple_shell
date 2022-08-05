@@ -7,7 +7,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 {
 	size_t bufsize = 0;
 	char *buffer = NULL, **location = NULL;
-	char *token = NULL, empty = "none";
+	char *token = NULL, *empty = "none";
 	int status = 0;
 
 	while (1)
